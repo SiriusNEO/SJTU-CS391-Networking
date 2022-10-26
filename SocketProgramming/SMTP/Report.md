@@ -13,6 +13,7 @@ SMTP
 - smtp_client.py        # 实现
 - test_smtp_client.py   # 测试
 - Report.md             # 本报告
+- README.md             # 使用文档
 - pic1.png              # 用于测试的png格式图片
 - test_pic/             # 测试成功的screentshot
 ```
@@ -33,7 +34,7 @@ SMTP
 with SMTPClient(host="smtp.qq.com", port=465, mode="ssl") as client:
     client.login("<your smtp username>", "<your smtp pass>")
     client.send_by_myself(
-        receivers=["<a recevier>"],
+        receivers="<a recevier>",
         data="测试"
     )
 ```

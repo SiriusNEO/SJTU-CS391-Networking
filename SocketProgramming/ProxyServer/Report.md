@@ -13,6 +13,7 @@ SMTP
 - proxy_server.py        # 实现
 - 404.html               # 404 报错页面
 - Report.md              # 本报告
+- README.md              # 使用文档
 - .proxy_cache/          # 由 proxy_server 创建的 cache 文件夹
 - test_client.py         # 使用 requests 发送请求的本地模拟 client
 - test_server.py         # 使用 Flask 创建的简单的模拟 server
@@ -128,7 +129,7 @@ python3 proxy_server.py --help
   
   ![](test_pic/pic9.png)
 
-- [x] 综合测试
+- [x] **综合测试**
 
   我们将代理服务器挂上系统代理，并访问几个网站。由于没有实现 SSL 加密，均使用 80 端口（http），因此我只测试了一些非 https 网站
 
