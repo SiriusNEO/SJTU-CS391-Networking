@@ -1,0 +1,35 @@
+HTTP/1.1 200 OK
+Content-Type: text/css; charset=utf-8
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+Expires: Wed, 26 Oct 2022 04:24:38 GMT
+Date: Wed, 26 Oct 2022 04:24:38 GMT
+Cache-Control: private, max-age=86400
+Cross-Origin-Opener-Policy: same-origin-allow-popups
+Cross-Origin-Resource-Policy: cross-origin
+Server: ESF
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Accept-Ranges: none
+Vary: Accept-Encoding
+Transfer-Encoding: chunked
+
+4c7
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  src: url(http://fonts.gstatic.com/s/lato/v23/S6u_w4BMUTPHjxsI9w2_Gwfo.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: url(http://fonts.gstatic.com/s/lato/v23/S6u8w4BMUTPHjxsAXC-v.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: url(http://fonts.gstatic.com/s/lato/v23/S6u_w4BMUTPHjxsI5wq_Gwfo.ttf) format('truetype')

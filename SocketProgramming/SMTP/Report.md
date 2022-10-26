@@ -4,6 +4,8 @@
 
 作者：林超凡，520021911042
 
+
+
 ## 1. 项目结构
 
 ```
@@ -12,12 +14,14 @@ SMTP
 - test_smtp_client.py   # 测试
 - Report.md             # 本报告
 - pic1.png              # 用于测试的png格式图片
-- test_xxx.png          # 测试成功的screentshot
+- test_pic/             # 测试成功的screentshot
 ```
 
-作业要求了 SMTP 客户端的实现被封装为类 `class SMTPClient`。除了正常初始化使用外，本项目也将其封装成了上下文管理器方便使用。
+作业要求的 SMTP 客户端的实现被封装为类 `class SMTPClient`。除了正常初始化使用外，本项目也将其封装成了上下文管理器方便使用。
 
 此外，为了方便支持不同类型数据的发送， 本项目还包含一个对 **MIME**(Multipurpose Internet Mail Extensions) 的简单实现 `class MIMEModel` 。
+
+
 
 ## 2. 简单的示例
 
@@ -38,6 +42,8 @@ with SMTPClient(host="smtp.qq.com", port=465, mode="ssl") as client:
 
 你也可以手动使用 `MIMEModel` 来构造一个规范的 MIME，或者使用 python `email` 库中的 MIME 进行发送。
 
+
+
 ## 3. 测试情况
 
 测试详见  `test_smtp_client.py` 
@@ -46,33 +52,35 @@ with SMTPClient(host="smtp.qq.com", port=465, mode="ssl") as client:
 
 - [x] 纯文本发送
 
-  ![](test_plain_text.png)
+  ![](test_pic/test_plain_text.png)
 
 - [x] 开启 SSL/TLS 并使用 465 端口进行发送
 
-  ![](test_ssl.png)
+  ![](test_pic/test_ssl.png)
 
   加密信息
 
-  ![](test_ssl1.png)
+  ![](test_pic/test_ssl1.png)
 
 - [x] 单图片发送
 
-  ![](test_single_picture.png)
+  ![](test_pic/test_single_picture.png)
 
   值得一提的是，不加 `attachment; filename=` 这些字段的话，在交大邮箱下看起来效果和图片附件是不一样的
 
-  ![](test_single_picture1.png)
+  ![](test_pic/test_single_picture1.png)
 
 - [x] 文字 + 附件发送
 
-  ![](test_attachment.png)
+  ![](test_pic/test_attachment.png)
 
 - [x] 图片内嵌于文字发送，使用 html
 
-  ![](test_html.png)
+  ![](test_pic/test_html.png)
 
-## 4. Use of Protocols
+## 4. 实现细节
+
+### 4.1 协议
 
 实现此项目共用到了如下 SMTP 标准指令
 
@@ -86,6 +94,20 @@ QUIT
 ```
 
 其中 `HELO` 被用在连接时建立会话，`AUTH LOGIN` 用于登录，中间部分的 `MAIL` `RCPT` `DATA` 用于实现发送邮件，最后 `QUIT` 用来退出。
+
+发送邮件流程为：先使用 `MAIL` 指定发送方，然后使用 `RCPT`（可以多个）指定接收方，然后发送一个 `DATA` 表示开始发送数据，然后发送邮件内容，最后以 `<CRLF>.<CRLF>` 表示发送结束。
+
+### 4.2 TLS/SSL
+
+直接使用 python 的 SSL 提供的 wrapper，将原来的 socket 包装为一个 SSLSocket。
+
+注意使用 SSL 后应该 connect 465 端口（常规的 SMTP 服务器）而非 25 端口。
+
+### 4.3 发送图片与文字混合邮件
+
+这里我使用 MIME 的 `multipart` 类型，其 attach 了两个子段，一个是类型为 `text/html` 的 html 文本部分，还有一个是 `image/png` 的图片部分。html 中引用图片，然后在图片中注意加入 `Content-ID` 这个 header，使得其能被引用到。
+
+
 
 ## 5. API Doc
 

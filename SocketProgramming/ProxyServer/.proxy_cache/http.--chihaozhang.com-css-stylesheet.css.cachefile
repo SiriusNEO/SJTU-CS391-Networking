@@ -1,0 +1,90 @@
+HTTP/1.1 200 OK
+Date: Wed, 26 Oct 2022 04:19:27 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Last-Modified: Sun, 24 Oct 2021 07:45:40 GMT
+ETag: "4ef-5cf146e542490"
+Accept-Ranges: bytes
+Content-Length: 1263
+Vary: Accept-Encoding
+Content-Type: text/css
+
+@media all
+{
+    body {
+	font-family: Verdana, Arial, sans-serif !important; 
+    /* font-family: monospace; */
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+	font-size: 14px;
+/*	line-height: 21px;*/
+    background-color:#FFF;	
+	margin:auto;
+	max-width: 900px;
+    }
+
+
+
+/*
+    body #content {
+	padding-top: 5%;
+	padding-bottom: 15%;
+    }
+
+*/
+
+    .figure{
+	float:right;
+    }
+
+    p{
+	margin-left: 1.5%;
+    }
+
+    h1 {
+    font-variant:small-caps;
+    font-weight:bold;
+	font-size:2em;
+	padding:0 0 0 0;
+	color: #000000;
+/*	color: #FFFFFF;*/
+    }
+
+
+
+ h2 {
+    /* color:maroon; */
+    font-variant:small-caps;
+    font-weight:bold;
+    /* font-size:x-large;         */
+	font-size:1.2em;
+/*	line-height:100%;*/
+	padding:2% 0 0 0;
+	/* color: #000000; */
+    } 
+    
+    ul,h3 {
+	font-size:1.1em;
+	/*line-height: 120%;*/
+	color: #000000;
+    }
+
+    h4 {
+	font-size:1em;
+    font-variant:small-caps;
+    margin-top: 0cm;
+	/* line-height: 0; */
+	color: #000000;
+
+    }
+
+    a {text-decoration: none; color: #800000;}
+    a:visited {text-decoration: none; color: #800000;} 
+    a:hover {text-decoration: underline; color: #800000;}
+
+}
+
+/* th, td {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+  } */

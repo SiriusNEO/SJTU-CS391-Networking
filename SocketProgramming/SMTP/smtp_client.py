@@ -19,6 +19,9 @@ CRLF: str = "\r\n"
 """
 
 class MIMEModel:
+    """
+        MIME 简单实现.
+    """
 
     def __init__(self):
         self._headers = []
@@ -145,9 +148,9 @@ class MIMEModel:
 
 class SMTPClient:
     """
-        mode: plain/ssl
+        SMTP 客户端简单实现.
     """
-
+    
     # socket config
     BUF_SIZE: int = 1024
     
@@ -443,4 +446,5 @@ def auto_create_client(username: str, auth_pass: str) -> SMTPClient:
     return client
 
 
-logging.basicConfig(level = logging.DEBUG, format = '%(asctime)s - %(name)s - %(levelname)s - [CS391-SMTP-Demo] %(message)s')
+# logging.basicConfig(level = logging.DEBUG, format = '%(asctime)s - %(name)s - %(levelname)s - [CS391-SMTP-Demo] %(message)s')
+logging.basicConfig(level = logging.INFO, format = '%(asctime)s - %(name)s - %(levelname)s - [CS391-SMTP-Demo] %(message)s')

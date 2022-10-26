@@ -1,0 +1,24 @@
+HTTP/1.1 200 OK
+Date: Wed, 26 Oct 2022 04:22:29 GMT
+Content-Type: text/plain
+Content-Length: 10
+Connection: keep-alive
+Server: openresty
+Age: 88589
+Content-MD5: 84PkZVcuoji3gTFqeKSaqw==
+ETag: "F383E465572EA238B781316A78A49AAB"
+Last-Modified: Tue, 25 Oct 2022 03:45:58 GMT
+X-CCDN-CacheTTL: 2592000
+nginx-hit: 1
+via: CHN-ZJjiaxing-CUCC2-CACHE11[15],CHN-ZJjiaxing-CUCC2-CACHE22[0,TCP_HIT,13],CHN-SH-GLOBAL1-CACHE55[3],CHN-SH-GLOBAL1-CACHE52[0,TCP_HIT,1]
+x-hcs-proxy-type: 1
+x-oss-hash-crc64ecma: 2851429693001720152
+x-oss-object-type: Normal
+x-oss-request-id: 63575BF7FFF71A303082A947
+x-oss-server-time: 3
+x-oss-storage-class: Standard
+x-oss-version-id: CAEQNRiBgMCZuv60oBgiIDU0MTlmZjE3YzFlYjQ0MDc4OTA0OWRmM2QwM2VhNWEw
+X-CCDN-Expires: 2503411
+Accept-Ranges: bytes
+
+1666669557

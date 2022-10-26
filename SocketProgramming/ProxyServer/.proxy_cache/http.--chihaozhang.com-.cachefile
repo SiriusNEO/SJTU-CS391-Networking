@@ -1,0 +1,104 @@
+HTTP/1.1 200 OK
+Date: Wed, 26 Oct 2022 04:19:27 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Last-Modified: Mon, 17 Oct 2022 05:02:33 GMT
+ETag: "ffb-5eb33e2282877"
+Accept-Ranges: bytes
+Content-Length: 4091
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-471940-4"></script>
+<script src="https://beacon-v2.helpscout.help/static/js/vendor.06c7227b.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-471940-4');
+</script>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chihao Zhang's Homepage</title>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="https://joon-kwon.github.io/style.css"/>  -->
+
+  </head>
+  <body>
+<!--    <h1 class="title">Chihao Zhang's Homepage</h1> -->
+    <h2>Chihao Zhang <b>张驰豪</b></h2>
+    <p>
+      I am an Associate Professor in <a href="http://jhc.sjtu.edu.cn/">John Hopcroft Center for Computer Science</a> at <a href="https://www.sjtu.edu.cn/">Shanghai Jiao Tong University</a>. I am also a member of <a href="https://basics.sjtu.edu.cn/">Basic Studies in Computing Science Lab</a> (BASICS) at Shanghai Jiao Tong University since 2008.
+    </p>
+    <p>
+      I obtained my Ph.D., master and bachelor's degrees from the <a href="http://www.cs.sjtu.edu.cn">Department of Computer Science and Engineering</a>, <a href="http://www.sjtu.edu.cn">Shanghai Jiao Tong University</a> in 2016, 2012, and 2009 respectively. After that, I stayed in  <a href="http://itcsc.erg.cuhk.edu.hk/">Institute of Theoretical Computer Science and Communications</a>, <a href="http://www.cuhk.edu.hk">The Chinese University of Hong Kong</a> as a postdoctoral fellow from 2016 to 2018. I started teaching at my alma mater in 2018.
+    </p>
+
+<p style="color:Tomato;font-size:12pt"><strong>
+  每个周一晚上7点至10点，我均会在软件学院1402-2办公室。任何人有任何事情均可在此时间段找我，无需预约。</strong> </p>
+    <h2 style="margin: bottom 0;">Contact</h2>
+    <table width="100%">
+	<td valign="top">
+	  <h4>Postal Address</h4>
+	    John Hopcroft Center for Computer Science<br>
+	    Shanghai Jiao Tong University<br>
+	    800 Dongchuan Rd, Shanghai, China
+	</td>
+	<td valign="top">
+	  <h4>Office Address</h4>
+	    Room 1402-2 <br>
+	    School of Software (软件学院)<br>
+	    Minhang Campus
+	</td>
+	<td valign="top">
+	  <h4>Email Address</h4>
+	  firstname.lastname AT gmail.com <br>
+	  firstname AT sjtu.edu.cn <br>
+	</td>
+    </table>
+      <h2>Research Interests</h2>
+    <p>
+      I work in the area of theoretical computer science. 
+    </p>
+
+      <h2> Current Teaching </h2>
+      <p>
+      <a href="teaching/Comb2022/index.html"> CS1961: Combinatorics in Computer Science</a> (Fall 2022)
+      </p>
+      <p>
+      <a href="teaching/AA2022/index.html"> CS3958: Advanced Algorithms </a> (Fall 2022)
+    </p>
+    <p>
+      <a href="teaching/IntroTCS2022/index.html"> CS1212: Introduction to Theoretical Computer Science </a> (Fall 2022)
+    </p>
+<h2> <a href="./teaching.html">Previous Teaching</a></h2>
+
+<!--
+      <h2> Seminar </h2>
+    <p>
+      <a href="seminar/2018fall.html">Fine-grained algorithms and complexity</a> (Fall 2018)
+    -->  
+    <h2> <a href="papers.html">Papers </a></h2>
+  </body>
+<!--
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-471940-4']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</html>
+
+-->
+
+<!-- Last modified: Feb. 17. 2021 -->
