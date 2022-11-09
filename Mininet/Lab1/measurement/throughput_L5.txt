@@ -1,0 +1,5 @@
+Client(h5) output:
+sent=65887 KB	rate=3.294 Mbps
+
+Server(h2) output:
+received=65887 KB	rate=2.941 Mbps

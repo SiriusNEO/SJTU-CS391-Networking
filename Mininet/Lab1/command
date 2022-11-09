@@ -1,0 +1,33 @@
+# client
+h1 java Iperfer -s -p 5001 > server.log &
+
+# server
+h2 java Iperfer -c -h 10.0.0.1 -p 5001 -t 20 > client.log
+
+
+# for Q3
+
+# multi pings
+h1 ping h4 -c 20 > ping1.log &
+h7 ping h9 -c 20 > ping2.log &
+h8 ping h10 -c 20 > ping3.log &
+
+# multi iperf
+h1 java Iperfer -s -p 5001 > server1.log &
+h7 java Iperfer -s -p 5002 > server2.log &
+h8 java Iperfer -s -p 5003 > server3.log &
+h4 java Iperfer -c -h 10.0.0.1 -p 5001 -t 20 > client1.log &
+h9 java Iperfer -c -h 10.0.0.7 -p 5002 -t 20 > client2.log &
+h10 java Iperfer -c -h 10.0.0.8 -p 5003 -t 20 > client3.log &
+
+# for Q4
+
+# pings
+h1 ping h4 -c 20 > ping_h1-h4.log &
+h5 ping h6 -c 20 > ping_h5-h6.log &
+
+# iperf
+h1 java Iperfer -s -p 5001 > server_h1-h4.log &
+h5 java Iperfer -s -p 5002 > server_h5-h6.log &
+h4 java Iperfer -c -h 10.0.0.1 -p 5001 -t 20 > client_h1-h4.log &
+h6 java Iperfer -c -h 10.0.0.5 -p 5002 -t 20 > client_h5-h6.log &

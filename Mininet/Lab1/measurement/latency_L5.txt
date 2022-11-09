@@ -1,0 +1,6 @@
+Ping result:
+    --- 10.0.0.6 ping statistics ---
+    20 packets transmitted, 20 received, 0% packet loss, time 19024ms
+    rtt min/avg/max/mdev = 10.087/10.292/12.333/0.565 ms
+
+Lantency = rtt/2 = 5.146ms

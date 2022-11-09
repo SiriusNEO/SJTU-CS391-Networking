@@ -1,0 +1,112 @@
+*****************************************************
+*  Q2
+*****************************************************
+Expected:
+    lantency = lantency_L1 + lantency_L2 + lantency_L3 = 40.114ms
+        = 40.114ms + 10.153ms + 30.147ms
+        = 80.414ms
+
+    throughput = min(throughput_L1, throughput_L2, throughput_L3)
+        (client)
+            = min(2.814 Mbps, 5.198 Mbps, 4.192 Mbps)
+            = 2.814 Mbps
+        (server)
+            = min(2.362 Mbps, 4.771 Mbps, 3.559 Mbps)
+            = 2.362 Mbps
+
+Measured:
+    avg rtt = 164.036ms
+    avg lantency = 80.247ms.
+
+    throughput rate = 2.884 Mbps (client), 2.332 Mbps (server).
+
+    The measured results match the expected results.
+
+Explanation:
+    For lantency, it is like a "series connection" -- every packet should pass each hop so they must be
+    added together; For throughput, it is like a "parallel connection" and only the smallest bandwidth
+    matters.
+
+
+*****************************************************
+*  Q3
+*****************************************************
+Expected:
+    If there are n pairs hosts communicating simultaneously, 
+        latency = original_latency
+        throughput = original_throughput / n
+
+Measured:
+    Two Pairs:
+        avg rtt (h1-h4) = 160.584ms
+        avg rtt (h7-h9) = 160.568ms
+        throughput (h1-h4) = 2.101 Mbps (client), 1.614 Mbps (server)
+        throughput (h7-h9) = 0.986 Mbps (client), 0.755 Mbps (server)
+
+    Three Pairs:
+        avg rtt (h1-h4) = 160.315ms
+        avg rtt (h7-h9) = 160.256ms
+        avg rtt (h8-h10)= 160.554ms
+        throughput (h1-h4) = 1.543 Mbps (client), 1.243 Mbps (server)
+        throughput (h7-h9) = 1.160 Mbps (client), 0.885 Mbps (server)
+        throughput (h8-h10)= 0.446 Mbps (client), 0.384 Mbps (server)
+
+
+Explanation:
+    Due to multiplexing, each latency equals to the original latency, which meets our 
+    prediction.
+    
+    But for the throughput, it seems that they are not equal but their sum is close to 
+    the original throughput. This is probably because in Mininet, I can't run two iperf 
+    commands simultaneously, so I just run the first command (in the background) and run 
+    the second one very very fast. This leads to inequality between two pairs.
+
+    In three pairs, this phenomenon is more obvious because I need to run three commands.
+    So the time gap between the first one and the third one is unignorable.
+
+
+*****************************************************
+*  Q4
+*****************************************************
+Expected:
+    latency (h1-h4) = latency (h1-h4, in Q2) 
+        = 80.414ms
+
+    lantency (h5-h6) = latency_L4 + latency_L2 + latency_L5
+        = 5.157ms + 10.153ms + 5.146ms
+        = 20.456ms
+
+    throughput (h1-h4) = min(throughput_L1, throughput_L2/2, throughput_L3)
+        (client)
+            = min(2.814 Mbps, 2.599, 4.192 Mbps)
+            = 2.599 Mbps
+        (server)
+            = min(2.362 Mbps, 2.386 Mbps, 3.559 Mbps)
+            = 2.362 Mbps
+    
+    throughput (h5-h6) = min(throughput_L4, throughput_L2/2, throughput_L5)
+        (client)
+            = min(3.428 Mbps, 2.599 Mbps, 3.294 Mbps)
+            = 2.599 Mbps
+        (server)
+            = min(2.988 Mbps, 2.386 Mbps, 2.941 Mbps)
+            = 2.386 Mbps
+
+Measured:
+    avg rtt (h1-h4) = 160.588ms
+    avg latency (h1-h4) = 80.294ms
+    avg rtt (h5-h6) = 40.453ms
+    avg latency (h5-h6) = 20.227ms
+
+    throughput rate (h1-h4) = 2.669 Mbps (client), 2.271 Mbps (server).
+    throughput rate (h5-h6) = 2.662 Mbps (client), 2.365 Mbps (server).
+
+Explanation:
+    The route of h1-h4 is L1-L2-L3 and the route of h5-h6 is L4-L2-L5.
+    L2 is the common link these two routes share. So because of multiplexing, 
+    each of them gains half of the bandwidth of L2.
+
+    For lantency, lantency is the same. So for each route, just add the lantency
+    of links on the way.
+
+    The phenomenon mentioned in Q3 also appears in this question.

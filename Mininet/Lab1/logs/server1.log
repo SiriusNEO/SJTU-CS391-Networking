@@ -1,0 +1,3 @@
+Iperfer server start listening port: 5001
+Iperfer server get a client TCP connection from ip: /10.0.0.4:55895
+received=30867 KB	rate=1.243 Mbps
