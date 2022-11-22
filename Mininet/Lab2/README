@@ -1,0 +1,20 @@
+CS391 Mininet-based Lab #2: Link & Network Layer Forwarding
+
+Author: Chaofan Lin, 50021911042, ACM Class @SJTU.
+
+To run the mininet:
+    $ python ./run_mininet.py [topo_file] -a
+
+To run the POX:
+    $ bash ./run_pox.sh
+
+To run the switch:
+    $ java -jar VirtualNetwork.jar -v [switch_name]
+
+To run the router:
+    $ java -jar VirtualNetwork.jar -v [router_name] -r [routing_table] -a [arp_cache]
+
+File Structure:
+    progAssign2/src/                (source code of the implementation)
+    README              (this file)
+    Mininet-Lab2-V3.docx   (assignment doc)
