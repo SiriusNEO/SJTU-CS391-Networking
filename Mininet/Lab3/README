@@ -1,0 +1,29 @@
+CS391 Mininet-based Lab #3: ARP, ICMP, and RIP
+
+Author: Chaofan Lin, 50021911042, ACM Class @SJTU.
+
+To run the mininet:
+    $ python ./run_mininet.py [topo_file] -a
+
+To run the POX:
+    $ bash ./run_pox.sh
+
+To run the router:
+    $ java -jar VirtualNetwork.jar -v [router_name] -r [routing_table] -a [arp_cache]
+
+To test the ICMP implementation:
+    Please follow the doc.
+
+To test the ARP implementation:
+    $ python ./run_mininet.py [topo_file]
+    $ java -jar VirtualNetwork.jar -v [router_name] -r [routing_table]
+    (Without the -a argument)
+
+To test the RIP implementation:
+    $ java -jar VirtualNetwork.jar -v [router_name]
+    (Without the -r argument)
+
+File Structure:
+    progAssign3/src/                (source code of the implementation)
+    README              (this file)
+    Mininet-Lab3-V2.docx   (assignment doc)
