@@ -1,0 +1,18 @@
+CS391 Mininet-based Lab #4: Software Defined Networking
+
+Author: Chaofan Lin, 50021911042, ACM Class @SJTU.
+
+To run the mininet:
+    $ sudo python ./run_mininet.py mesh,N
+Here mesh,N produces a a complete graph with N nodes.
+
+To run the L3Routing:
+    $ java -jar FloodlightWithApps.jar -cf l3routing.prop
+
+To run the LoadBalancer:
+    $ java -jar FloodlightWithApps.jar -cf loadbalancer.prop
+
+File Structure:
+    progAssign4/src/                (source code of the implementation)
+    README              (this file)
+    Mininet-Lab4-V2.docx   (assignment doc)

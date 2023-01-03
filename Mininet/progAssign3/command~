@@ -1,8 +1,0 @@
-python ./run_mininet.py topos/single_rt.topo
-
-
-bash ./run_pox.sh
-
-
-java -jar VirtualNetwork.jar -v r1 -r rtable.r1 -a arp_cache
-
